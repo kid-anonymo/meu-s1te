@@ -3,54 +3,108 @@
  <head>
   <meta charset="utf-8"/>
   <title>Among Modders</title>
+  <style>
+    /* Container flexível para desktop */
+    #container {
+      display: flex;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    /* Menu lateral */
+    #menu {
+      width: 300px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    /* Linha divisória */
+    #divider {
+      width: 2px;
+      background-color: black;
+      margin: 0 10px;
+    }
+    /* Conteúdo principal */
+    #conteudo {
+      flex: 1; /* ocupa o restante do espaço */
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    /* Centralizar textos */
+    h3, p, center {
+      text-align: center;
+    }
+    /* Responsividade para celular */
+    @media (max-width: 768px) {
+      #container {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      #menu, #conteudo {
+        width: 100%;
+        padding: 5px;
+      }
+      #divider {
+        display: none;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  </style>
  </head>
  <body>
   <div id="container">
-  <div style="float:left; width:300px;">
-   <img src="imagens/menu-modders.jpeg" alt="Menu site" width="300"/>
-   <div style="text-align: center;"><strong>Menu do site<br/> abaixo</strong></div>
-    <h5><center><a href="index.html">HOME</a><hr/></center></h5>
-    <center><strong><h5>Clique aqui para<br/>ser recrutado<br/>👇👇</h5></strong></center>
-    <h5><center><a href="formu.html">Área de Recrutamento</a><hr/></center></h5>
-    <center><h5><strong>Veja como foi a<br/>Criação do Grupo<br/>👇👇</strong></h5></center>
-    <center><h5><a href="criacao.html">Criação do Modders</a><hr/></h5></center>
-    <center><h5><strong>Grupos de among br existentes<br/>👇👇</strong></h5></center>
-    <center><h5><a href="grupos.html">Lista de outros Grupos de Among</a><hr/></h5></center>
-    <center><h5><strong>Campeonatos, saiba como funciona:<br/>👇👇</strong></h5></center>
-    <center><h5><u><a href="contato.html">Campeonato Modders</a></u></h5></center>
-    <center><h5><a href="admins.html">Somente Admins</a><hr/></h5></center>
-   </div>
-   <div style="float:left; width:2px; height:2000px; background-color:black;"></div>
-   <div style="float:left; width:800px;">
-     <div style="text-align: center;">
-      <img src="imagens/banner-among.jpeg" alt="among banner" style="width: 600px; height: 500px;" />
-     </div>
-     <center><p>Olá Tripulantes, Sejam muito Bem-viados ao nosso web site, ops, Bem-vindos* 😅<br/>
-     Nesse site irá ter algumas informações sobre o nosso grupo.</p></center>
+    <div id="menu">
+      <img src="imagens/menu-modders.jpeg" alt="Menu site" width="300" style="max-width:100%; height:auto;"/>
+      <div style="text-align: center;"><strong>Menu do site<br/> abaixo</strong></div>
+      <h5><a href="index.html" style="display:block; text-align:center;"><hr/>HOME<hr/></a></h5>
 
-      <h3><center><strong>Objetivos:</strong></center></h3>
-      <center><p>Nosso objetivo é simplesmente reunir jogadores de Among Us em um ambiente descontraído 
+      <h5 style="text-align:center;"><strong>Clique aqui para<br/>ser recrutado<br/>👇👇</strong></h5>
+      <h5><a href="formu.html" style="display:block; text-align:center;"><hr/>Área de Recrutamento<hr/></a></h5>
+
+      <h5 style="text-align:center;"><strong>Veja como foi a<br/>Criação do Grupo<br/>👇👇</strong></h5>
+      <h5><a href="criacao.html" style="display:block; text-align:center;"><hr/>Criação do Modders<hr/></a></h5>
+
+      <h5 style="text-align:center;"><strong>Grupos de among br existentes<br/>👇👇</strong></h5>
+      <h5><a href="grupos.html" style="display:block; text-align:center;"><hr/>Lista de outros Grupos de Among<hr/></a></h5>
+
+      <h5 style="text-align:center;"><strong>Campeonatos, saiba como funciona:<br/>👇👇</strong></h5>
+      <h5><u><a href="contato.html" style="text-decoration:none;">Campeonato Modders</a></u></h5>
+      <h5><a href="admins.html" style="display:block; text-align:center;"><hr/>Somente Admins<hr/></a></h5>
+    </div>
+
+    <div id="divider"></div>
+
+    <div id="conteudo">
+      <div style="text-align: center;">
+        <img src="imagens/banner-among.jpeg" alt="among banner" style="width: 600px; max-width: 100%; height: auto;" />
+      </div>
+      <p>Olá Tripulantes, Sejam muito Bem-viados ao nosso web site, ops, Bem-vindos* 😅<br/>
+      Nesse site irá ter algumas informações sobre o nosso grupo.</p>
+
+      <h3><strong>Objetivos:</strong></h3>
+      <p>Nosso objetivo é simplesmente reunir jogadores de Among Us em um ambiente descontraído 
        e cheio de galera daora pra conhecer! 😎 Se você for uma pessoa muito séria, então não recomendamos
        entrar — aqui a zoeira é liberada no grupo do WhatsApp, mas nas partidas levamos a jogabilidade a sério.  
-       Organização e diversão andam juntas! 🎮</p></center>
+       Organização e diversão andam juntas! 🎮</p>
 
-     <div style="text-align: center;"><p><center>Também temos vários eventos dentro do Among Us, como o "dia especial da semana". Sempre que tem algum
+      <p>Também temos vários eventos dentro do Among Us, como o "dia especial da semana". Sempre que tem algum
       feriado, a administração organiza uma sala com aquele determinado tema — seja com trajes, regras ou ambientação.  
-      É sempre uma surpresa divertida e diferente!</div>
+      É sempre uma surpresa divertida e diferente!</p>
 
-    <h3><center><strong>Campeonatos:</strong></center></h3>
-    <center><p>Sempre temos campeonatos no modo esconde, valendo premiação em PIX — sim, isso mesmo que você leu!  
-     Damos <strong>premiações em PIX para os 3 primeiros do ranking</strong> que se destacaram no campeonato! 💰</p></center>
-    <center><img src="imagens/campeonato-modders.jpeg" alt="campeonato modders" width="700" height="500"/></center>
+      <h3><strong>Campeonatos:</strong></h3>
+      <p>Sempre temos campeonatos no modo esconde, valendo premiação em PIX — sim, isso mesmo que você leu!  
+       Damos <strong>premiações em PIX para os 3 primeiros do ranking</strong> que se destacaram no campeonato! 💰</p>
+      <img src="imagens/campeonato-modders.jpeg" alt="campeonato modders" style="max-width:100%; height:auto;"/>
 
-    <p><center>O sistema de pontuação foi planejado e criado pelos administradores, sendo bem justo e equilibrado.  
-    Inclui até pontos bônus! É um sistema funcional, divertido e competitivo na medida certa.</center></p>
+      <p>O sistema de pontuação foi planejado e criado pelos administradores, sendo bem justo e equilibrado.  
+      Inclui até pontos bônus! É um sistema funcional, divertido e competitivo na medida certa.</p>
 
-    <h3 style="text-align: center;"><strong>Parcerias:</strong></h3>
-    <center>Temos algumas parcerias com grupos incríveis. São eles: <strong>Among Coven, Among Pró, Among Hunters</strong> e etc.  
-     Essas parcerias existem para unirmos os grupos em uma só sala e fazermos eventos bem divertidos e variados.  
-     É sempre uma festa quando essa galera se junta! 🚀</center></p>
-   </div>
+      <h3><strong>Parcerias:</strong></h3>
+      <p>Temos algumas parcerias com grupos incríveis. São eles: <strong>Among Coven, Among Pró, Among Hunters</strong> e etc.  
+       Essas parcerias existem para unirmos os grupos em uma só sala e fazermos eventos bem divertidos e variados.  
+       É sempre uma festa quando essa galera se junta! 🚀</p>
+    </div>
   </div>
  </body>
 </html>
